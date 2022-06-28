@@ -1,0 +1,31 @@
+ALGORITHM sentence
+VAR
+    nb_chr,nb_wrd,nb_vow,i:INTEGER:=0;
+    ch:STRING;
+BEGIN
+    Write("write a sentence ");
+    read(ch);
+    WHILE (ch[i]<>'.') DO
+        nb_chr:=nb_chr+1;
+        IF (ch[i]=' ') THEN
+            nb_wrd:=nb_wrd+1;
+        END_IF
+        SWITCH (ch[i]) DO
+            case 'a' : nb_vow:=nb_vow+1;BREAK;
+        case 'e' :  nb_vow:=nb_vow+1;BREAK;
+        case 'i' :  nb_vow:=nb_vow+1;BREAK;
+        case 'u' :  nb_vow:=nb_vow+1;BREAK;
+        case 'o' :  nb_vow:=nb_vow+1;BREAK;
+        case 'y' :  nb_vow:=nb_vow+1;BREAK;
+           
+        END_SWITCH
+        i:=i+1;
+    END_WHILE
+     Write("number of chracteres =");
+     Write(nb_chr);
+      Write("number of words =");
+     Write(nb_wrd);
+      Write("number of vowels =");
+     Write(nb_vow);
+     
+END
